@@ -12,14 +12,14 @@
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="#002196F3"> <!-- Change the background color here -->
+        app:cardBackgroundColor="#002196F3">
 
         <LinearLayout
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:orientation="horizontal"
-            android:padding="16dp"> <!-- Align content to the left -->
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/taskNameTextView"

@@ -32,8 +32,8 @@
         android:layout_toStartOf="@+id/btnAddTask"
         android:text="You Got This !"
         android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:fontFamily="@font/roboto_bold" />
+        android:textSize="27sp"
+        android:fontFamily="@font/bebasneue_regular" />
 
 
 </RelativeLayout>

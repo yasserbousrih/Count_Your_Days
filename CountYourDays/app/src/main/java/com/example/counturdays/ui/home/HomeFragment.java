@@ -11,23 +11,32 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.counturdays.LoginActivity;
 import com.example.counturdays.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.gson.Gson;
 
 public class HomeFragment extends Fragment {
 
     private FirebaseAuth mAuth;
-    private TextView userNameTextView;
+    private TextView messageTxt;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mAuth = FirebaseAuth.getInstance();
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        userNameTextView = root.findViewById(R.id.message);
-
+        messageTxt = root.findViewById(R.id.message);
         Button logoutButton = root.findViewById(R.id.LOGOUT);
+
+        fetchQuote();
+
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,4 +53,30 @@ public class HomeFragment extends Fragment {
 
         return root;
     }
+    private void fetchQuote() {
+        String url = "https://zenquotes.io/api/random";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Parse the JSON response
+                        Gson gson = new Gson();
+                        Quote[] quotes = gson.fromJson(response, Quote[].class);
+
+                        // Set the text of messageTxt to the quote
+                        messageTxt.setText(quotes[0].q);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                messageTxt.setText("Failed to fetch quote.");
+            }
+        });
+
+        // Add the request to the RequestQueue.
+        Volley.newRequestQueue(getActivity()).add(stringRequest);
+    }
+
 }

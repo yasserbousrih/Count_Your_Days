@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CountUrDays" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Deep Ocean Blue -->
+        <item name="colorPrimaryVariant">@color/colorText</item> <!-- Dark Gray -->
+        <item name="colorSecondary">@color/colorSecondary</item> <!-- Sky Blue -->
+
+        <item name="colorOnPrimary">@color/colorBackground</item> <!-- Light Gray -->
+        <!-- Secondary brand color. -->
+        <item name="colorSecondaryVariant">@color/colorAccent</item> <!-- Coral -->
+        <item name="colorOnSecondary">@color/colorText</item> <!-- Dark Gray -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85498451055",
+    "project_id": "count-your-days-31ec2",
+    "storage_bucket": "count-your-days-31ec2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85498451055:android:505afe0f529ceaa2f0299a",
+        "android_client_info": {
+          "package_name": "com.example.counturdays"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXPk4W0-xTrT_eijoYziuVo12NYNnXQy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

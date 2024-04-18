@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0077B6</color> <!-- Deep Ocean Blue -->
+    <color name="loginbutton">#660077B6</color> <!-- Deep Ocean Blue -->
+
+    <color name="colorSecondary">#90E0EF</color> <!-- Sky Blue -->
+    <color name="colorBackground">#F8F9FA</color> <!-- Light Gray -->
+    <color name="colorBackground2">#C4C6C8</color> <!-- Light Gray -->
+
+    <color name="colorAccent">#FF6F61</color> <!-- Coral -->
+    <color name="colorText">#343A40</color> <!-- Dark Gray -->
+    <color name="lightGray">#D6D6D6</color> <!-- light Gray -->
+
+    <!-- ... other color definitions ... -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="black">#000000</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="darkGray">#343A40</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+</resources>
